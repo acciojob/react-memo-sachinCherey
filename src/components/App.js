@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>React.useMemo</h1>
+      <h1 id='main'>React.useMemo</h1>
       <h1>My Todos</h1>
       <p>New Todo</p>
       <div id="todo">
@@ -42,10 +42,10 @@ const App = () => {
         value={todoInputValue}
         onChange={(e) => setTodoInputValue(e.target.value)}
       />
-      <button onClick={handleAddTodo}>Add Todo</button>
+      <button id='add-todo-btn' onClick={handleAddTodo}>Add Todo</button>
       <hr />
       <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>+</button>
+      <button id='incr-cnt' onClick={() => setCount(count + 1)}>+</button>
       <br />
       <h1>Expensive Calculation</h1>
       <h1>React.memo</h1>
@@ -58,7 +58,7 @@ const App = () => {
       />
       <button onClick={handleAddMemo}>Add Skill</button>
       <div id="memo">
-        <ul>
+        <ul id='skill-input'>
           {memos.map((memo, index) => (
             <li key={index}>{memo}</li>
           ))}
